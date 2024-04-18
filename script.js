@@ -1,13 +1,15 @@
-function firstWord(s) {
-if(s.length==0){
-	return "";
-}
-	let newStr=s.trim();
-	for(let i=0;i<newStr.length;i++){
-		if(newStr[i]==" "){
-			return newStr.slice(0,i);
-		}
-	}
+function firstWord(str) {
+if (!str || !str.includes(' ')) {
+        return str;
+    }
+
+    // Find the index of the first space character
+    const spaceIndex = str.indexOf(' ');
+
+    // Extract the first word of the string using substring
+    const firstWord = str.substring(0, spaceIndex);
+
+    return firstWord;
 }
 
 // Do not change the code below
