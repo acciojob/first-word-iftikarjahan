@@ -4,14 +4,19 @@ if (!str || !str.includes(' ')) {
     }
 
     // Find the index of the first space character
-    const spaceIndex = str.indexOf(' ');
+    let strr=str.trim();
+    // console.log(strr);
+    const spaceIndex = strr.indexOf(' ');
+    // console.log(spaceIndex);
 
     // Extract the first word of the string using substring
-    const firstWord = str.substring(0, spaceIndex);
+    if(spaceIndex==-1){
+      return strr;
+    }
+    const firstWord = strr.slice(0, spaceIndex);
 
     return firstWord;
 }
-
 // Do not change the code below
 
 const s = prompt("Enter String:")
